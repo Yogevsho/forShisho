@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Service Assistant</title>
+  <!-- Viewport Meta Tag for Responsive Design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for Modern Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Customer Service Assistant</h1>
+    
+    <div class="card" id="transcription-card">
+      <h2>Shisho Says:</h2>
+      <p id="customer-text">Waiting for shisho to speak...</p>
+    </div>
+    
+    <div class="card" id="suggestion-card">
+      <h2>Suggested Response:</h2>
+      <p id="suggested-response">No suggestion yet.</p>
+    </div>
+
+    <div class="card" id="history-card">
+      <h2>Conversation History:</h2>
+      <ul id="history-list"></ul>
+    </div>
+    
+    <div class="controls">
+      <button id="start-button" class="btn start-btn">
+        <span id="mic-icon">🎤</span> Start Listening
+      </button>
+      <button id="stop-button" class="btn stop-btn" disabled>Stop Listening</button>
+    </div>
+  </div>
+  
+  <!-- Include Compromise Library -->
+  <script src="https://unpkg.com/compromise@13.11.3/builds/compromise.min.js"></script>
+  
+  <script src="scripts.js"></script>  
+</body>
+</html>

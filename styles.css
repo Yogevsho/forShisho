@@ -1,0 +1,214 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply a modern font */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container to center the content */
+  .container {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header */
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #4a4a4a;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  /* Card styles */
+  .card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 700px;
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+  .card h2 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  .card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    min-height: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* History list */
+  #history-list {
+    list-style-type: none;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  
+  #history-list li {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+  
+  #history-list li:last-child {
+    border-bottom: none;
+  }
+  
+  #history-list li strong {
+    color: #007BFF;
+  }
+  
+  /* Controls */
+  .controls {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .start-btn {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .start-btn:hover:not(:disabled) {
+    background-color: #218838;
+  }
+  
+  .stop-btn {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .stop-btn:hover:not(:disabled) {
+    background-color: #c82333;
+  }
+  
+  .btn:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+  }
+  
+  /* Highlighting matched keywords */
+  mark {
+    background-color: #ffeb3b;
+    color: #333;
+    padding: 0 2px;
+    border-radius: 3px;
+  }
+  
+  /* Microphone icon animation */
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
+  #mic-icon.active {
+    animation: blink 1s infinite;
+  }
+  
+  /* Fade in animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      padding: 15px 20px;
+    }
+    
+    .controls {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    #history-list {
+      max-height: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5em;
+    }
+    
+    .card h2 {
+      font-size: 1em;
+    }
+    
+    .card p {
+      font-size: 1em;
+    }
+    
+    .btn {
+      font-size: 0.9em;
+      padding: 10px 20px;
+    }
+    
+    #history-list {
+      max-height: 150px;
+    }
+  }
+  
